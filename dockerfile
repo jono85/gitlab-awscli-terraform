@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM docker:latest
 
 RUN apk update && apk add bash curl bc sed jq zip python3 util-linux
 RUN pip3 install awscli

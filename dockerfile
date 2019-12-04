@@ -1,9 +1,9 @@
 FROM docker:latest
 
-RUN apk update && apk add bash curl bc sed jq zip python3 util-linux git
+RUN apk update && apk add bash curl bc sed jq zip python3 util-linux git go
 RUN pip3 install awscli
-RUN wget https://releases.hashicorp.com/terraform/0.12.16/terraform_0.12.16_linux_amd64.zip
-RUN unzip terraform_0.12.16_linux_amd64.zip -d /usr/bin/
-RUN rm -rf terraform_0.12.16_linux_amd64.zip
+RUN go get -u github.com/hashicorp/terraform
+RUN go get -u github.com/aiven/terraform-provider-aiven
+RUN export PATH=$PATH:~/go/bin
 
 ENTRYPOINT /bin/bash

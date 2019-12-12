@@ -9,5 +9,6 @@ RUN rm -rf terraform_0.12.18_linux_amd64.zip
 
 RUN wget https://github.com/aiven/terraform-provider-aiven/releases/download/v1.0.18/terraform-provider-aiven-linux_amd64
 RUN mv terraform-provider-aiven-linux_amd64 /usr/bin/terraform-provider-aiven
+RUN chmod +x /usr/bin/terraform-provider-aiven
 
 ENTRYPOINT /bin/bash

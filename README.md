@@ -1,3 +1,3 @@
 # gitlab-awscli-terraform
 Alpine image enhanced with some basic shell tools, awscli and terraform for gitlab CI deployment
-2019-12-12 - terraform updated to 0.12.18, aiven provider to 1.0.18
+2020-02-20 - update to aws-cli 1.18.3, terraform 0.12.21, aiven 1.2.0 

@@ -1,6 +1,6 @@
 FROM docker:latest
 
-RUN apk update && apk --no-cache add bash curl bc sed jq zip python3 util-linux git
+RUN apk update && apk --no-cache add bash curl bc sed jq zip python3 py3-pip util-linux git
 RUN pip3 install awscli
 
 RUN wget https://releases.hashicorp.com/terraform/0.12.29/terraform_0.12.29_linux_amd64.zip
